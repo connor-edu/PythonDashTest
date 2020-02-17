@@ -42,7 +42,8 @@ class NameFrequency:
 
     # plot
     def plot(self, column_name1, column_name2):
-        plt.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
+        plt.figure(num=None, figsize=(12, 6), dpi=80,
+                   facecolor='w', edgecolor='k')
         plt.subplot(121)  # 1 row, 2 columns, 1 order
         plt.barh(self.plot_group1[column_name1], self.plot_group1["counts"])
         plt.title('Frequency of ' + column_name1)
@@ -65,7 +66,7 @@ class NameFrequency:
                 print("Not an Integer! Try again.")
                 continue
             else:
-                if userInput not in [0,1]:
+                if userInput not in [0, 1]:
                     print("Index does not exist! Try again.")
                     continue
                 return userInput
@@ -91,6 +92,3 @@ class NameFrequency:
             else:
                 return userInput
                 break
-
-
-
