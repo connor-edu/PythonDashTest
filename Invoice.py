@@ -41,3 +41,15 @@ class Invoice:
                 return userInput
             except ValueError:
                 print("Not a number! Try again.")
+
+    @classmethod
+    def returnTotalQuantity(cls, products):
+        num = 0
+        for k, v in products.items():
+            num += float(v["qnt"])
+        return num
+
+    @classmethod
+    def calculateNumberOfItems(cls, products):
+        num = len(products.items())
+        return num
